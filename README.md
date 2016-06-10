@@ -8,5 +8,5 @@
 
 - [X] 变量，表达式，注释语句支持
 - [X] if 语句, for 语句支持
-- [ ] include 模板组合
+- [X] include 模板组合
 - [ ] extends 模板继承

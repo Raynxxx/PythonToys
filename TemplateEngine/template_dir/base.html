@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <h1 id="title">
+    {% if title %}
+        <span>{{ title }}</span>
+    {% else %}
+        <span>Hello World</span>
+    {% endif %}
+    {% for n in numbers %}
+        {% if n > 1 %}
+            {% break %}
+        {% else %}
+            {{ n }}
+        {% endif %}
+    {% endfor %}
+    {# this is a comment #}
+    {% for item in items %}
+        {% include "item.html" %}
+    {% endfor %}
+  </h1>
+</body>
+</html>
