@@ -23,5 +23,11 @@
         {% include "item.html" %}
     {% endfor %}
   </h1>
+  <div id="content">
+  {% block content %}
+    <h2>Parent Content</h2>
+  {% endblock content %}
+  </div>
+
 </body>
 </html>
