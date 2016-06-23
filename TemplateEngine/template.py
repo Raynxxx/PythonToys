@@ -29,12 +29,12 @@ class Template:
         self.re_comment = re.compile(r'\{#.*?#\}')
         self.re_tag = re.compile(r'\{%.*?%\}')
         self.re_tokens = re.compile(r'(\{\{.*?\}\}|\{#.*?#\}|\{%.*?%\})')
-        self.re_extends = re.compile(r'\{% extends (?P<name>.*?) %\}')
+        self.re_extends = re.compile(r'\{%\s*extends (?P<name>.*?)\s*%\}')
         self.re_blocks = re.compile(
-            r'\{% block (?P<name>\w+) %\}'
+            r'\{%\s*block (?P<name>\w+)\s*%\}'
             r'(?P<code>.*?)'
-            r'\{% endblock \1 %\}', re.DOTALL)
-        self.re_block_super = re.compile(r'\{\{ block\.super \}\}')
+            r'\{%\s*endblock \1\s*%\}', re.DOTALL)
+        self.re_block_super = re.compile(r'\{\{\s*block\.super\s*\}\}')
 
         # 生成函数定义
         self.code_builder.add_line('def {}():'.format(self.func_name))

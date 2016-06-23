@@ -12,3 +12,13 @@
 - [X] extends 模板继承
 - [X] HTML字符串安全转义
 - [ ] 过滤器(管道)
+
+### 2. ObjectModel 简易对象模型
+
+[代码点这里](./ObjectModel)
+
+- [X] 类
+- [X] 继承
+- [X] 属性, 方法(可传参数)
+- [ ] 获取方法 (bind self)
+- [ ] Meta 元类
